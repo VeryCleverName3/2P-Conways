@@ -179,14 +179,14 @@ function nextStage(){
     switch(stage){
         case 1:
             {
-                p1Map = new World(20, 20, "blue");
+                p1Map = new World(15, 15, "blue");
 
                 activeWorld = p1Map;
             };
             break;
         case 2:
             {
-                p2Map = new World(20, 20, "red");
+                p2Map = new World(15, 15, "red");
                 activeWorld = p2Map;
                 p2Map.draw();
             }
@@ -194,7 +194,7 @@ function nextStage(){
         case 3:
             {
 
-                realMap = new World(100, 100, "white");
+                realMap = new World(75, 75, "white");
                 realMap.map = insertIntoMap(p1Map.map, realMap.map, realMap.map.length - p1Map.map.length, realMap.map[0].length - p1Map.map[0].length);
                 realMap.map = insertIntoMap(p2Map.map, realMap.map, 0, 0);
                 activeWorld = undefined;
